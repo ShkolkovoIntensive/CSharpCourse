@@ -9,14 +9,14 @@ namespace CSharpCourse.Lesson1
             string tmp = Console.ReadLine();
             if (!Int32.TryParse(tmp, out int a))
             {
-                Console.WriteLine("ERROR: Wrong input!");
+                Console.WriteLine("ERROR: Incorrect input!");
                 Environment.Exit(-1);
             }
             Console.Write("Enter the divider: ");
             tmp = Console.ReadLine();
             if (!Int32.TryParse(tmp, out int b))
             {
-                Console.WriteLine("ERROR: Wrong input!");
+                Console.WriteLine("ERROR: Incorrect input!");
                 Environment.Exit(-1);
             }
             if (b == 0)
