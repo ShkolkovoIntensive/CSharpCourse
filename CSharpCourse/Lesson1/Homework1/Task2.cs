@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CSharpCourse.Lesson1
+namespace CSharpCourse.Lesson1.Homework1
 {
     class Task2
     {
