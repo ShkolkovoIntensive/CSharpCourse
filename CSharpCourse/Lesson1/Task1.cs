@@ -1,7 +1,7 @@
 ﻿using System;
-namespace CSharpCourse
+namespace CSharpCourse.Lesson1
 {
-    class Program
+    class Task1
     {
         static void Main(string[] args)
         {
