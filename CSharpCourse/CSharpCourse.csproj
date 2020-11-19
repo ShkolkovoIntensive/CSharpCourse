@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSharpCourse.Lesson1.Task4</StartupObject>
+    <StartupObject>CSharpCourse.Lesson1.Homework2.Task2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,13 +50,13 @@
     <Compile Include="Lesson1\Homework1\Task2.cs" />
     <Compile Include="Lesson1\Homework1\Task1.cs" />
     <Compile Include="Lesson1\Homework1\Task4.cs" />
+    <Compile Include="Lesson1\Homework2\Task2.cs" />
+    <Compile Include="Lesson1\Homework2\Task1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lesson1\Homework2\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
