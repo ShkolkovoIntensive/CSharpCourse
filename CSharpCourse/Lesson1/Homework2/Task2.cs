@@ -27,7 +27,7 @@ namespace CSharpCourse.Lesson1.Homework2
             info.number = 0;
             info.account = BankAccounts.Budgetary;
             info.balance = 10005.8M;
-            Console.WriteLine($"Your bank account number is {info.number}, type is {info.account}, balance is {info.balance}");
+            Console.WriteLine($"Your bank account number is {info.number}, type is {info.account}, balance is {info.balance}.");
         }
     }
 }

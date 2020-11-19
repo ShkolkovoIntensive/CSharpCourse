@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSharpCourse.Lesson1.Homework2.Task2</StartupObject>
+    <StartupObject>CSharpCourse.Lesson1.Homework2.Task3</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,6 +52,7 @@
     <Compile Include="Lesson1\Homework1\Task4.cs" />
     <Compile Include="Lesson1\Homework2\Task2.cs" />
     <Compile Include="Lesson1\Homework2\Task1.cs" />
+    <Compile Include="Lesson1\Homework2\Task3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

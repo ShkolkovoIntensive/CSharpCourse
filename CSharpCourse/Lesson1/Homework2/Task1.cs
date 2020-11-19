@@ -18,7 +18,7 @@ namespace CSharpCourse.Lesson1.Homework2
         static void Main(string[] args)
         {
             BankAccounts Account = BankAccounts.Credit;
-            Console.WriteLine($"Your bank account type is {Account}");
+            Console.WriteLine($"Your bank account type is {Account}.");
         }
     }
 }
