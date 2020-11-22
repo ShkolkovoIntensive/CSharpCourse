@@ -6,8 +6,9 @@ namespace CSharpCourse.Lesson1.Homework1
         static void Main(string[] args)
         {
             Console.Write("Enter the symbol: ");
-            char a = (char)Console.Read();
-            Console.WriteLine($"The next symbol is '{(char)++a}'");
+            var symbol = Console.Read();
+            var nextSymbol = (char)(symbol + 1);
+            Console.WriteLine($"\nThe next symbol is {nextSymbol}");
         }
     }
 }
