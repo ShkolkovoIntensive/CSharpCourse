@@ -3,42 +3,38 @@ namespace CSharpCourse.Lesson1.Homework1
 {
     class Task4
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Enter the coefficient a: ");
-            string tmp = Console.ReadLine();
-            if(!Int32.TryParse(tmp, out int a))
+            var a = TryGetNumber("A");
+            var b = TryGetNumber("B");
+            var c = TryGetNumber("C");
+
+            // Лучше сделать свой Exception.
+            if (a == 0) throw new Exception("The coefficient A cannot be zero in a quadratic equation.");
+            
+            var d = b * b - 4 * a * c;
+
+            if (d <= 0)
             {
-                Console.WriteLine("ERROR: Incorrect input!");
-                Environment.Exit(-1);
+                var x = -b / (2.0 * a);
+                Console.WriteLine(d < 0 ? "No roots." : $"X = {x}.");
             }
-            Console.Write("Enter the coefficient b: ");
-            tmp = Console.ReadLine();
-            if (!Int32.TryParse(tmp, out int b))
+            else 
             {
-                Console.WriteLine("ERROR: Incorrect input!");
-                Environment.Exit(-1);
+                var x1 = (-b + Math.Sqrt(d)) / (2.0 * a);
+                var x2 = (-b - Math.Sqrt(d)) / (2.0 * a);
+                Console.WriteLine($"X1 = {x1}.\nX2 = {x2}.");
             }
-            Console.Write("Enter the coefficient c: ");
-            tmp = Console.ReadLine();
-            if (!Int32.TryParse(tmp, out int c))
+
+            int TryGetNumber(string msg)
             {
-                Console.WriteLine("ERROR: Incorrect input!");
-                Environment.Exit(-1);
-            }
-            int D = b * b - 4 * a * c;
-            if (D > 0)
-            {
-                var x1 = ((-b - Math.Sqrt(D)) / (2 * a));
-                var x2 = ((-b + Math.Sqrt(D)) / (2 * a));
-                Console.WriteLine($"There are 2 roots in this equation: {x1} and {x2}");
-            } else if (D == 0)
-            {
-                var x = -b / (2 * a);
-                Console.WriteLine($"There is 1 root in this equation: {x}");
-            } else
-            {
-                Console.WriteLine("There are no roots in this equation");
+                Console.Write($"Enter the coefficient {msg}: ");
+                var value = Console.ReadLine();
+
+                if (int.TryParse(value, out var number) == false)
+                    throw new FormatException("You entered incorrect data!");
+
+                return number;
             }
         }
     }
