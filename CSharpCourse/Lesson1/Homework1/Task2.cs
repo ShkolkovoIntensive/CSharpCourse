@@ -3,30 +3,22 @@ namespace CSharpCourse.Lesson1.Homework1
 {
     class Task2
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Enter the dividend: ");
-            string tmp = Console.ReadLine();
-            if (!Int32.TryParse(tmp, out int a))
+            var dividend = TryGetNumber("divisible value");
+            var divider  = TryGetNumber("divisor");
+
+            Console.WriteLine(divider == 0 ? "You can't divide by zero!" : $"Result: {dividend / divider}");
+
+            int TryGetNumber(string message)
             {
-                Console.WriteLine("ERROR: Incorrect input!");
-                Environment.Exit(-1);
-            }
-            Console.Write("Enter the divider: ");
-            tmp = Console.ReadLine();
-            if (!Int32.TryParse(tmp, out int b))
-            {
-                Console.WriteLine("ERROR: Incorrect input!");
-                Environment.Exit(-1);
-            }
-            if (b == 0)
-            {
-                Console.WriteLine("ERROR: Division by zero!");
-                Environment.Exit(-1);
-            } else
-            {
-                var output = a / (float)b;
-                Console.WriteLine($"The quotient is {output}");
+                Console.Write($"Enter the {message}: ");
+                var value = Console.ReadLine();
+
+                if (int.TryParse(value, out var number) == false)
+                    throw new FormatException("You entered incorrect data!");
+
+                return number;
             }
         }
     }
